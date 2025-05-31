@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Project:GAIA</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#" class="logo">Project<span>:Gaia</span></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-3-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">How it Works</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <div class="nav__btns">
+        <button class="btn"><i class="ri-shopping-cart-line"></i></button>
+      </div>
+    </nav>
+ 
+    <section class="home">
+    <header id="home">
+      <div class="header__image">
+        <img src="img/main.png" alt="header" />
+      </div>
+      <div class="header__content">
+        <h1>WELCOME TO PROJECT <span>GAIA</span></h1>
+
+        <div class="header__btn">
+            <a href="#categories" class="btn">Buy Now</a>
+        </div>
+        <ul class="socials">
+          <li>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+          </li>
+          </li>
+          <li>
+            <a href="#"><i class="ri-phone-fill"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+</section>
+
+<div style="visibility: hidden;">This is invisible but takes space.</div>
+<div style="visibility: hidden;">This is invisible but takes space.</div>
+
+
+    <section class="section__container discover__container" id="categories">
+        <div class="market-container">
+            <div class="controls">
+              <div class="search-wrapper">
+                <input type="text" id="searchInput" class="search-bar" placeholder="Search items..." />
+                <i class="fas fa-search"></i>
+              </div>
+              <select id="categorySelect" class="category-select">
+                <option value="ALL">ALL CATEGORY</option>
+                <option value="MALE">MALE SUIT</option>
+                <option value="FEMALE">FEMALE SUIT</option>
+                <option value="TRADITIONAL">TRADITIONAL</option>
+                </select>
+            </div>
+        
+            <div class="market-grid" id="marketGrid">
+                <!--Male Selection-->
+              <div class="item" data-category="MALE">
+                <img src="img/hero.jpg" alt="Male Suit" />
+                <h3>Classic Male Suit</h3>
+              </div>
+              <div class="item" data-category="MALE">
+                <img src="img/hero1.jpg" alt="Male Suit" />
+                <h3>Elegant Male Suit</h3>
+              </div>
+              <div class="item" data-category="MALE">
+                <img src="img/male.jpg" alt="Male Suit" />
+                <h3>Cream Suit</h3>
+              </div>
+              <div class="item" data-category="MALE">
+                <img src="img/male1.jpg" alt="Male Suit" />
+                <h3>Formal Suit</h3>
+              </div>
+
+              <!--Female Selection-->
+              <div class="item" data-category="FEMALE">
+                <img src="img/female 1.jpg" alt="Female Suit" />
+                <h3>Event Packages</h3>
+              </div>
+              <div class="item" data-category="FEMALE">
+                <img src="img/female 2.jpg" alt="Female Suit" />
+                <h3>Modern Tuxedo</h3>
+              </div>
+              <div class="item" data-category="FEMALE">
+                <img src="img/female 3.jpg" alt="Female Suit" />
+                <h3>Evening Dress</h3>
+              </div>
+              <div class="item" data-category="FEMALE">
+                <img src="img/female 4.jpg" alt="Female Suit" />
+                <h3>Fairy Costume</h3>
+              </div>
+
+              <!--TRADITIONAL-->
+              <div class="item" data-category="TRADITIONAL">
+                <img src="img/BARONG 1.jpg" alt="Traditional" />
+                <h3></h3>
+              </div>
+              <div class="item" data-category="TRADITIONAL">
+                <img src="img/BARONG 4.jpg" alt="Traditional" />
+                <h3></h3>
+              </div>
+              <div class="item" data-category="TRADITIONAL">
+                <img src="img/BARO'T SAYA.jpg" alt="Traditional" />
+                <h3></h3>
+              </div>
+              <div class="item" data-category="TRADITIONAL">
+                <img src="img/BARO'T SAYA 1.jpg" alt="Traditional" />
+                <h3></h3>
+                </div>
+          
+            </div>
+          </div>
+    </section>
+
+    <section class="section__container subscribe__container" id="contact">
+      <div class="subscribe__content">
+        <h2 class="section__header">CONTACT US</h2>
+
+        <form action="/">
+          <input type="text" placeholder="Type Your Email" />
+          <button class="btn">SEND</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <a href="#" class="logo">Project:<span>Gaia</span></a>
+        </div>
+        <div class="footer__col">
+          <ul class="footer__links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <ul class="socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-phone-fill"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2025 KyDev. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/script/script.js"></script>
+  </body>
+</html>

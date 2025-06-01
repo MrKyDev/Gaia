@@ -321,13 +321,110 @@ nav {
   color: var(--text-light);
 }
 
-.footer {
-  background-color: var(--primary-color);
-  padding: 2rem 1rem;
-  color: var(--white);
-  font-family: 'Segoe UI', sans-serif;
+/*Contact Us*/
+  .section__contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: url(../img/home.png);
+  background-size:cover;
 }
 
+.contact-container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  margin-bottom: 25px;
+  color: #1e3a8a;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+  font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.send-btn {
+  margin-top: 15px;
+  width: 100%;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-btn:hover {
+  background-color: #2563eb;
+}
+
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 30px 20px;
+  }
+}
+
+.footer {
+  padding: 0.2rem 0.2rem;
+  color: var(--white);
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--primary-color);
+  position: relative; /* for positioning child elements like .footer__bar */
+  padding-bottom: 3rem; /* give space for bar */
+}
 .footer__container {
   display: flex;
   flex-wrap: wrap;
@@ -364,6 +461,16 @@ nav {
   margin-bottom: 0.5rem;
   font-size: 1rem;
   font-weight: 500;
+ }
+
+.footer__resources {
+  margin-top: 2rem; /* Optional: space it nicely above the footer bar */
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .footer__links {
@@ -383,14 +490,19 @@ nav {
   opacity: 1;
 }
 
+
+
 .footer__bar {
-  text-align: center;
-  font-size: 0.95rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  background-color: rgba(97, 97, 97, 0.8);
+  border-radius: 5px;
+  font-size: 0.85rem;
   color: var(--extra-light);
-  opacity: 0.6;
-  padding-top: 1rem;
-  margin-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
   .about__grid {
@@ -514,3 +626,9 @@ nav {
   .about__grid {
     gap: 4rem 2rem;
   }
+@media (max-width: 600px) {
+  .footer__bar {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

@@ -64,6 +64,21 @@ searchInput.addEventListener("keydown", (e) => {
 });
 filterProducts();
 
+// Contact Us Mail Redirect
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const contact = document.getElementById('contact').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AContact: ${contact}%0D%0AMessage: ${message}`;
+  const mailtoLink = `mailto:your_email@example.com?subject=Contact Form Submission from ${name}&body=${body}`;
+
+  window.location.href = mailtoLink;
+});
+
 //Scroll Reveal
 ScrollReveal().reveal(".header__image img", {
   ...scrollRevealOption,

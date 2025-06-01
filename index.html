@@ -24,13 +24,10 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#product">Products</a></li>
+        <li><a href="#contact">Contact Us</a>
         </ul>
-      <div class="nav__search" id="nav-search">
-        <input type="text" placeholder="Search" />
-        <span><i class="ri-search-2-line"></i></span>
-      </div>
     </nav>
-
+    
     <header class="section__container header__container" id="home">
       <div class="header__image">
         <img src="img/main hero 2.png" alt="header" />
@@ -49,12 +46,9 @@
       <div class="about__header">
         <div>
           <h2 class="section__header">About us</h2>
-          <p class="section__description">
-            Our passion for exceptional craftsmanship drives us to curate the
-            best pieces for every room in your house.
-          </p>
+          <p class="section__description">At Project Gaia, we blend digital creativity with purposeful design, showcasing artworks that inspire, empower, and reimagine a sustainable future.</p>
         </div>
-        <button class="about__btn">Shop Now</button>
+        <a href="#product" class="about__btn">Shop Now</a>
       </div>
       <div class="about__content">
         <div class="about__image">
@@ -64,8 +58,7 @@
           <div class="about__card">
             <h3>1.</h3>
             <h4>Who we are</h4>
-            <p>
-              
+            <p>              
             </p>
           </div>
           <div class="about__card">
@@ -88,6 +81,7 @@
         </div>
       </div>
     </section>
+
 <section class="section__container product__container" id="product">
   <div class="product__filter">
     <div class="search-wrapper">
@@ -103,9 +97,7 @@
       <option value="traditional">Traditional Filipino Attire</option>
     </select>
   </div>
-
   <h2 class="section__header">Products</h2>
-
   <div class="product__grid">
     <div class="product__card" data-category="male-suit" data-keywords="male formal attire suit tuxedo">
       <h4>Male Formal Attire</h4>
@@ -140,28 +132,60 @@
   </div>
 </section>
 
+<section class="section__contact" id="contact">
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" required />
+      </div>
 
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" required />
+      </div>
 
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input type="tel" id="contact" pattern="[0-9]{10,15}" />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" required></textarea>
+      </div>
+
+      <button type="submit" class="send-btn">Send Message</button>
+    </form>
+  </div>
+</section>
 <footer class="footer" id="contact">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <div class="footer__logo">
-            <a href="#" class="logo">Project:Gaia</a>
-          </div>
-          <ul class="footer__socials">
-          <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
-          <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
-        </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Resources</h4>
-          <ul class="footer__links">
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contact Support</a></li>
-            </ul>
-        </div>
-        <div class="footer__bar">Copyright © 2025 MrKyDev <br>All rights reserved.</div>
-    </footer>
+  <div class="section__container footer__container">
+    
+    <div class="footer__col">
+      <div class="footer__logo">
+        <a href="#" class="logo">Project:Gaia</a>
+      </div>
+      <ul class="footer__socials">
+        <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+        <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer__col footer__resources">
+      <h4>Resources</h4>
+      <ul class="footer__links">
+        <li><a href="#product">Pricing</a></li>
+        <li><a href="#contact">Contact Support</a></li>
+      </ul>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2025 MrKyDev<br>
+      All rights reserved.
+    </div>
+    
+  </div>
+</footer>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script/script.js"></script>

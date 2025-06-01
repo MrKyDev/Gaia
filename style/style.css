@@ -284,43 +284,6 @@ nav {
   background: #fff;
 }
 
-.swiper {
-  margin-top: 4rem;
-  width: 100%;
-}
-
-.client__card {
-  display: grid;
-  gap: 2rem;
-  max-width: 750px;
-  margin-inline: auto;
-  text-align: center;
-}
-
-.client__card img {
-  max-width: 250px;
-  margin-inline: auto;
-}
-
-.client__card p {
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  color: var(--text-light);
-  font-style: italic;
-}
-
-.client__card h4 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--text-dark);
-}
-
-.client__card h5 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-light);
-}
-
 /*Contact Us*/
   .section__contact {
   display: flex;
@@ -422,7 +385,7 @@ h2 {
   color: var(--white);
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--primary-color);
-  position: relative; /* for positioning child elements like .footer__bar */
+  position: relative;
   padding-bottom: 3rem; /* give space for bar */
 }
 .footer__container {

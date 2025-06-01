@@ -162,28 +162,6 @@ nav {
   color: var(--text-light);
 }
 
-.deals__container {
-  display: grid;
-  gap: 2rem;
-}
-
-.deals__card span {
-  display: inline-block;
-  margin-bottom: 0.5rem;
-  font-size: 2rem;
-}
-
-.deals__card h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-dark);
-}
-
-.deals__card p {
-  color: var(--text-light);
-}
-
 .about__header {
   display: flex;
   flex-direction: column;
@@ -406,11 +384,6 @@ nav {
   text-align: center;
 }
 
-@media (width > 540px) {
-  .deals__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .about__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -422,7 +395,6 @@ nav {
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
 @media (width > 768px) {
   nav {
@@ -501,14 +473,6 @@ nav {
     padding-top: 0;
   }
 
-  .deals__container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .deals__card:nth-child(1) {
-    grid-column: 1/4;
-  }
-
   .about__header {
     flex-direction: row;
     align-items: center;
@@ -538,17 +502,6 @@ nav {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
-@media (width > 1024px) {
-  .deals__container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .deals__card:nth-child(1) {
-    grid-column: unset;
-  }
-
   .about__grid {
     gap: 4rem 2rem;
   }
-}

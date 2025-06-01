@@ -459,13 +459,15 @@ h2 {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  background-color: rgba(97, 97, 97, 0.8);
+  background-color: rgba(202, 200, 200, 0.8);
   border-radius: 5px;
   font-size: 0.85rem;
-  color: var(--extra-light);
+  color:black;
   padding: 0.5rem 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgb(218, 18, 18);
+  border-left: 1px solid rgb(255, 4, 4);
+  border-bottom: 1px solid rgb(255,4,4);
+  border-right: 1px solid rgb(255,4,4);
 }
 
   .about__grid {

@@ -26,6 +26,36 @@ const scrollRevealOption = {
   duration: 1000,
 };
 
+/* Search bar and Category Section for Product */
+  const searchInput = document.getElementById("searchInput");
+  const categorySelect = document.getElementById("categorySelect");
+  const productCards = document.querySelectorAll(".product__card");
+
+  function filterProducts() {
+    const query = searchInput.value.toLowerCase();
+    const category = categorySelect.value.toLowerCase();
+
+    productCards.forEach((card) => {
+      const title = card.querySelector("h4").textContent.toLowerCase();
+      const matchesSearch = title.includes(query);
+      const matchesCategory =
+        category === "all" ||
+        (category === "male suit" && title.includes("male")) ||
+        (category === "female suit" && title.includes("female")) ||
+        (category === "classic" && title.includes("classic")) ||
+        (category === "traditional" && (title.includes("barong") || title.includes("baro")));
+
+      if (matchesSearch && matchesCategory) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  searchInput.addEventListener("input", filterProducts);
+  categorySelect.addEventListener("change", filterProducts);
+
 ScrollReveal().reveal(".header__image img", {
   ...scrollRevealOption,
   origin: "right",
@@ -43,11 +73,6 @@ ScrollReveal().reveal(".header__content p", {
   delay: 1500,
 });
 
-ScrollReveal().reveal(".deals__card", {
-  ...scrollRevealOption,
-  interval: 500,
-});
-
 ScrollReveal().reveal(".about__image img", {
   ...scrollRevealOption,
   origin: "right",
@@ -58,6 +83,3 @@ ScrollReveal().reveal(".about__card", {
   delay: 500,
 });
 
-const swiper = new Swiper(".swiper", {
-  loop: true,
-});

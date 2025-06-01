@@ -241,6 +241,7 @@ nav {
   max-width: 275px;
   margin-inline: auto;
 }
+
 .product__filter {
   display: flex;
   justify-content: space-between;
@@ -256,6 +257,7 @@ nav {
   border: 1px solid #ccc;
   padding: 0.5rem 0.75rem;
   border-radius: 8px;
+  background: #fff;
 }
 
 .search-wrapper input {
@@ -279,8 +281,8 @@ nav {
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
+  background: #fff;
 }
-
 
 .swiper {
   margin-top: 4rem;

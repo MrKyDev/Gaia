@@ -88,57 +88,61 @@
         </div>
       </div>
     </section>
+<section class="section__container product__container" id="product">
+  <div class="product__filter">
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="Search products..." />
+      <button id="searchBtn" aria-label="Search"><i class="ri-search-line"></i></button>
+    </div>
 
-    <section class="section__container product__container" id="product">
-      <div class="product__filter">
-      <div class="search-wrapper">
-        <input type="text" id="searchInput" placeholder="Search products..." />
-        <button id="searchBtn"><i class="ri-search-line"></i></button>
-      </div>
+    <select id="categorySelect" aria-label="Select product category">
+      <option value="all">All Categories</option>
+      <option value="male-suit">Male Suit</option>
+      <option value="female-suit">Female Suit</option>
+      <option value="classic">Classic Suit</option>
+      <option value="traditional">Traditional Filipino Attire</option>
+    </select>
+  </div>
 
-      <select id="categorySelect">
-        <option value="all">All Categories</option>
-        <option value="male suit">Male Suit</option>
-        <option value="female suit">Female Suit</option>
-        <option value="classic">Classic Suit</option>
-        <option value="traditional">Traditional Filipino Attire</option>
-      </select>
-      <h2 class="section__header">Products</h2>
-      <div class="product__grid">
-        <div class="product__card">
-          <h4>Male Formal Attire</h4>
-          <p>500/ per day</p>
-          <img src="img/hero.jpg" alt="product" />
-        </div>
-        <div class="product__card">
-          <h4>Female Formal Attire</h4>
-          <p>500/ per day</p>
-          <img src="img/formal 4.png" alt="product" />
-        </div>
-        <div class="product__card">
-          <h4>Male Classic Formal Attire</h4>
-          <p>500/ per day</p>
-          <img src="img/male1.jpg" alt="product" />
-        </div>
-        <div class="product__card">
-          <h4>Female Classic Formal Attire</h4>
-          <p>500/ per day</p>
-          <img src="img/female 2.jpg" alt="product" />
-        </div>
-        <div class="product__card">
-          <h4>Barong Tagalog</h4>
-          <p>800/ per day</p>
-          <img src="img/BARONG 4.jpg" alt="product" />
-        </div>
-        <div class="product__card">
-          <h4>Baro't Saya</h4>
-          <p>800/ per day</p>
-          <img src="img/BARO'T SAYA 1.jpg" alt="product" />
-        </div>
-      </div>
-    </section>
+  <h2 class="section__header">Products</h2>
 
-    <footer class="footer" id="contact">
+  <div class="product__grid">
+    <div class="product__card" data-category="male-suit" data-keywords="male formal attire suit tuxedo">
+      <h4>Male Formal Attire</h4>
+      <p>500/ per day</p>
+      <img src="img/hero.jpg" alt="product" />
+    </div>
+    <div class="product__card" data-category="female-suit" data-keywords="female formal attire suit dress">
+      <h4>Female Formal Attire</h4>
+      <p>500/ per day</p>
+      <img src="img/formal 4.png" alt="product" />
+    </div>
+    <div class="product__card" data-category="male-suit,classic" data-keywords="male classic formal attire suit tuxedo">
+      <h4>Male Classic Formal Attire</h4>
+      <p>500/ per day</p>
+      <img src="img/male1.jpg" alt="product" />
+    </div>
+    <div class="product__card" data-category="female-suit,classic" data-keywords="female classic formal attire suit dress">
+      <h4>Female Classic Formal Attire</h4>
+      <p>500/ per day</p>
+      <img src="img/female 2.jpg" alt="product" />
+    </div>
+    <div class="product__card" data-category="traditional" data-keywords="traditional barong tagalog filipino attire">
+      <h4>Barong Tagalog</h4>
+      <p>800/ per day</p>
+      <img src="img/BARONG 4.jpg" alt="product" />
+    </div>
+    <div class="product__card" data-category="traditional" data-keywords="traditional baro't saya filipino attire">
+      <h4>Baro't Saya</h4>
+      <p>800/ per day</p>
+      <img src="img/BARO'T SAYA 1.jpg" alt="product" />
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer" id="contact">
       <div class="section__container footer__container">
         <div class="footer__col">
           <div class="footer__logo">

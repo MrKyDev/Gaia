@@ -27,35 +27,44 @@ const scrollRevealOption = {
 };
 
 /* Search bar and Category Section for Product */
-  const searchInput = document.getElementById("searchInput");
-  const categorySelect = document.getElementById("categorySelect");
-  const productCards = document.querySelectorAll(".product__card");
+const searchInput = document.getElementById("searchInput");
+const categorySelect = document.getElementById("categorySelect");
+const productCards = document.querySelectorAll(".product__card");
+const searchBtn = document.getElementById("searchBtn");
 
-  function filterProducts() {
-    const query = searchInput.value.toLowerCase();
-    const category = categorySelect.value.toLowerCase();
+function filterProducts() {
+  const query = searchInput.value.trim().toLowerCase();
+  const selectedCategory = categorySelect.value.toLowerCase();
 
-    productCards.forEach((card) => {
-      const title = card.querySelector("h4").textContent.toLowerCase();
-      const matchesSearch = title.includes(query);
-      const matchesCategory =
-        category === "all" ||
-        (category === "male suit" && title.includes("male")) ||
-        (category === "female suit" && title.includes("female")) ||
-        (category === "classic" && title.includes("classic")) ||
-        (category === "traditional" && (title.includes("barong") || title.includes("baro")));
+  productCards.forEach((card) => {
+    const title = card.querySelector("h4").textContent.toLowerCase();
+    const keywords = card.dataset.keywords.toLowerCase();
+    const categories = card.dataset.category
+      .toLowerCase()
+      .split(",")
+      .map(cat => cat.trim());
+    const categoryMatch = selectedCategory === "all" || categories.includes(selectedCategory);
+    const searchMatch = query === "" || title.includes(query) || keywords.includes(query);
+    if (categoryMatch && searchMatch) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
 
-      if (matchesSearch && matchesCategory) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-    });
+searchInput.addEventListener("input", filterProducts);
+categorySelect.addEventListener("change", filterProducts);
+searchBtn.addEventListener("click", filterProducts);
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    filterProducts();
   }
+});
+filterProducts();
 
-  searchInput.addEventListener("input", filterProducts);
-  categorySelect.addEventListener("change", filterProducts);
-
+//Scroll Reveal
 ScrollReveal().reveal(".header__image img", {
   ...scrollRevealOption,
   origin: "right",

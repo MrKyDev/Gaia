@@ -6,15 +6,18 @@ menuBtn.addEventListener("click", (e) => {
   navLinks.classList.toggle("open");
 
   const isOpen = navLinks.classList.contains("open");
-  menuBtnIcon.setAttribute(
-    "class",
-    isOpen ? "ri-close-line" : "ri-menu-3-line"
-  );
+  menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
 });
 
 navLinks.addEventListener("click", (e) => {
   navLinks.classList.remove("open");
-  menuBtnIcon.setAttribute("class", "ri-menu-3-line");
+  menuBtnIcon.setAttribute("class", "ri-menu-line");
+});
+
+const navSearch = document.getElementById("nav-search");
+
+navSearch.addEventListener("click", (e) => {
+  navSearch.classList.toggle("open");
 });
 
 const scrollRevealOption = {
@@ -24,99 +27,37 @@ const scrollRevealOption = {
 };
 
 ScrollReveal().reveal(".header__image img", {
-  duration: 1000,
-});
-ScrollReveal().reveal(".header__content h1", {
-  ...scrollRevealOption,
-  delay: 500,
-});
-ScrollReveal().reveal(".header__content .section__description", {
-  ...scrollRevealOption,
-  delay: 1000,
-});
-ScrollReveal().reveal(".header__btn", {
-  ...scrollRevealOption,
-  delay: 1500,
-});
-ScrollReveal().reveal(".header__content .socials", {
-  ...scrollRevealOption,
-  delay: 2000,
-});
-
-ScrollReveal().reveal(".popular__card", {
-  ...scrollRevealOption,
-  interval: 500,
-});
-
-ScrollReveal().reveal(".discover__card img", {
-  ...scrollRevealOption,
-  origin: "left",
-});
-ScrollReveal().reveal(".discover__card:nth-child(2) img", {
   ...scrollRevealOption,
   origin: "right",
 });
-ScrollReveal().reveal(".discover__card__content h4", {
-  ...scrollRevealOption,
+ScrollReveal().reveal(".header__content div", {
+  duration: 1000,
   delay: 500,
 });
-ScrollReveal().reveal(".discover__card__content .section__description", {
+ScrollReveal().reveal(".header__content h1", {
   ...scrollRevealOption,
   delay: 1000,
 });
-ScrollReveal().reveal(".discover__card__content h3", {
+ScrollReveal().reveal(".header__content p", {
   ...scrollRevealOption,
   delay: 1500,
 });
-ScrollReveal().reveal(".discover__card__btn", {
-  ...scrollRevealOption,
-  delay: 2000,
-});
 
-ScrollReveal().reveal(".banner__content .section__header", {
+ScrollReveal().reveal(".deals__card", {
   ...scrollRevealOption,
-});
-ScrollReveal().reveal(".banner__content .section__description", {
-  ...scrollRevealOption,
-  delay: 500,
-});
-ScrollReveal().reveal(".banner__card", {
-  ...scrollRevealOption,
-  delay: 1000,
   interval: 500,
 });
 
-ScrollReveal().reveal(".subscribe__content .section__header", {
+ScrollReveal().reveal(".about__image img", {
   ...scrollRevealOption,
+  origin: "right",
 });
-ScrollReveal().reveal(".subscribe__content .section__description", {
-  ...scrollRevealOption,
+ScrollReveal().reveal(".about__card", {
+  duration: 1000,
+  interval: 500,
   delay: 500,
 });
-ScrollReveal().reveal(".subscribe__content form", {
-  ...scrollRevealOption,
-  delay: 1000,
+
+const swiper = new Swiper(".swiper", {
+  loop: true,
 });
-
-/*Market */
-const searchInput = document.getElementById('searchInput');
-const categorySelect = document.getElementById('categorySelect');
-const items = document.querySelectorAll('.item');
-
-function filterItems() {
-  const searchTerm = searchInput.value.toLowerCase();
-  const selectedCategory = categorySelect.value;
-
-  items.forEach(item => {
-    const title = item.querySelector('h3').textContent.toLowerCase();
-    const category = item.dataset.category;
-
-    const matchesCategory = selectedCategory === "ALL" || category === selectedCategory;
-    const matchesSearch = title.includes(searchTerm);
-
-    item.style.display = matchesCategory && matchesSearch ? 'block' : 'none';
-  });
-}
-
-searchInput.addEventListener('input', filterItems);
-categorySelect.addEventListener('change', filterItems);
